@@ -5,7 +5,7 @@
     $(document).ready(function () {
         var avatarTemplate = $('#templates .avatar').detach();
 
-        $('.post-meta').each(function () {
+        $('.gravatarize').each(function () {
             var $this = $(this),
                 authorLink = $this.find('.author a'),
                 url = authorLink.attr('href'),

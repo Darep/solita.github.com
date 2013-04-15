@@ -1,4 +1,16 @@
 <div class="elsewhere">
+    <h4>Authors</h4>
+    <ul class="authors">
+        asdf
+        {% for author in config.authors %}
+        <li class="gravatarize">
+            <span class="author">
+                <a href="{{ author.url }}" title="{{ author.email }}">{{ page.author }}</a>
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+
     <h4>Solita elsewhere</h4>
     <a href="/rss.xml" rel="external" class="rss"><i class="icon-rss"></i><span class="hidden">RSS</span></a>
     <a href="https://twitter.com/SolitaOy" rel="external" class="twitter"><i class="icon-twitter"></i><span class="hidden">Twitter</span></a>
