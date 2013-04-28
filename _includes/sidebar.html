@@ -1,13 +1,16 @@
 <div class="elsewhere">
     <h4>Authors</h4>
     <ul class="authors">
-        asdf
-        {% for author in config.authors %}
-        <li class="gravatarize">
-            <span class="author">
-                <a href="{{ author.url }}" title="{{ author.email }}">{{ page.author }}</a>
-            </span>
-        </li>
+        {% for authorr in site.authors %}
+            {% assign key = authorr[0] %}
+            {{ key }}
+            {% assign author = site.authors[key.to_s] %}
+            <li class="gravatarize">
+                <span class="author">
+                    {{ author.name }}
+                    <!-- <a href="{{ author.url }}" title="{{ author.email }}">{{ author.name }}</a> -->
+                </span>
+            </li>
         {% endfor %}
     </ul>
 
